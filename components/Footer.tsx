@@ -1,23 +1,67 @@
 import Link from 'next/link';
+import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="mt-12 border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
-      <div className="mx-auto grid w-full max-w-6xl gap-4 px-4 py-8 text-sm md:grid-cols-2 md:px-6">
-        <div>
-          <h2 className="font-semibold">NCWiki</h2>
-          <p className="mt-2 text-slate-600 dark:text-slate-300">
-            Plattform zur Vorbereitung auf die Schweizer medizinische Abschlussprüfung.
-          </p>
+    <footer className="bg-gray-900 dark:bg-black text-white py-12 mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 className="text-lg font-bold mb-4">NCWiki</h3>
+            <p className="text-gray-400">Kostenlose EMS Prüfungsvorbereitung für alle.</p>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Navigation</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link href="/uebungen" className="hover:text-white transition">
+                  Übungen
+                </Link>
+              </li>
+              <li>
+                <Link href="/untertests" className="hover:text-white transition">
+                  Untertests
+                </Link>
+              </li>
+              <li>
+                <Link href="/neuigkeiten" className="hover:text-white transition">
+                  Neuigkeiten
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Ressourcen</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link href="/ueber-uns" className="hover:text-white transition">
+                  Über Uns
+                </Link>
+              </li>
+              <li>
+                <Link href="/kontakt" className="hover:text-white transition">
+                  Kontakt
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Folge uns</h4>
+            <div className="flex gap-4">
+              <a href="#" className="text-gray-400 hover:text-white transition text-2xl">
+                <FaFacebook />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition text-2xl">
+                <FaTwitter />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition text-2xl">
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="space-y-1 md:text-right">
-          <Link href="/ueber-uns" className="block hover:underline">
-            Über Uns
-          </Link>
-          <Link href="/kontakt" className="block hover:underline">
-            Kontakt
-          </Link>
-          <p className="text-slate-500 dark:text-slate-400">© {new Date().getFullYear()} NCWiki</p>
+        <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+          <p>&copy; 2026 NCWiki. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </footer>

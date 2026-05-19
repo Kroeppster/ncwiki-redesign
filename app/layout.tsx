@@ -4,16 +4,20 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'NCWiki Redesign',
-  description: 'Modernes Lernportal zur Vorbereitung auf die Schweizer medizinische Prüfung.',
+  title: 'NCWiki - EMS Prüfungsvorbereitung',
+  description: 'Kostenlose Ressourcen für die EMS Prüfungsvorbereitung',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="de">
-      <body className="min-h-screen">
+      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
         <Header />
-        <main className="mx-auto w-full max-w-6xl px-4 py-6 md:px-6">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
