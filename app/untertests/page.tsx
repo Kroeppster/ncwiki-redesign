@@ -1,7 +1,7 @@
 'use client';
 
 import Card from '@/components/Card';
-import { FaFlask, FaCalculus, FaBook, FaBrain } from 'react-icons/fa';
+import { FaFlask, FaCalculator, FaBook, FaBrain } from 'react-icons/fa';
 
 const subtests = [
   {
@@ -14,7 +14,7 @@ const subtests = [
   {
     id: 2,
     title: 'Physik',
-    icon: FaCalculus,
+    icon: FaCalculator,
     description: 'Mechanik, Wellen, Elektrizität und verwandte Konzepte',
     topics: ['Mechanik', 'Energie', 'Wellen', 'Elektromagnetismus'],
   },
