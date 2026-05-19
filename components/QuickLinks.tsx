@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaBook, FaCliplist, FaBullhorn, FaUsers } from 'react-icons/fa';
+import { FaBook, FaClipboardList, FaBullhorn, FaUsers } from 'react-icons/fa';
 
 const links = [
   {
@@ -9,7 +9,7 @@ const links = [
     description: 'Kostenlose Übungsaufgaben',
   },
   {
-    icon: FaCliplist,
+    icon: FaClipboardList,
     label: 'Untertests',
     href: '/untertests',
     description: 'Informationen zu EMS Untertests',

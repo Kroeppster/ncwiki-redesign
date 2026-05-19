@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+const isGitHubPagesBuild =
+  process.env.GITHUB_PAGES === 'true' && process.env.NODE_ENV === 'production';
 const repoName = 'ncwiki-redesign';
 
 const nextConfig = {
@@ -8,8 +9,8 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: isGitHubActions ? `/${repoName}` : '',
-  assetPrefix: isGitHubActions ? `/${repoName}/` : '',
+  basePath: isGitHubPagesBuild ? `/${repoName}` : '',
+  assetPrefix: isGitHubPagesBuild ? `/${repoName}/` : '',
 };
 
 export default nextConfig;
