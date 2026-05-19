@@ -4,7 +4,7 @@ Modernes, statisches Next.js-Redesign der NCWiki-Plattform zur Vorbereitung auf 
 
 ## Tech Stack
 
-- Next.js 14 + TypeScript (App Router)
+- Next.js 15 + TypeScript (App Router)
 - Tailwind CSS (responsive, mobile-first)
 - React Icons
 - Static Site Generation (`output: export`) für GitHub Pages
